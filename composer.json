@@ -1,0 +1,25 @@
+{
+  "name": "pstaender/silverstripe-sentry",
+  "description": "Sentry Logging for SilverStripe",
+  "type": "silverstripe-vendormodule",
+  "homepage": "https://github.com/pstaender/silverstripe-sentry",
+  "keywords": [
+    "silverstripe",
+    "sentry",
+    "logging"
+  ],
+  "license": "GPL-2.0-only",
+  "authors": [
+    {
+      "name": "Philipp Staender",
+      "email": "philipp.staender@gmail.com"
+    }
+  ],
+  "support": {
+    "issues": "https://github.com/pstaender/silverstripe-sentry/issues"
+  },
+  "require": {
+    "sentry/sentry": "*",
+    "monolog/monolog": "*"
+  }
+}

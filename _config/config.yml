@@ -1,0 +1,17 @@
+SilverStripe\Core\Injector\Injector:
+  Psr\Log\LoggerInterface: 
+    calls:
+      LogFileHandler: [ pushHandler, [ '%$SentryLogHandler' ] ]
+  SentryLogHandler:
+    class: Monolog\Handler\RavenHandler
+    constructor:
+      - '%$RavenClient'
+    properties:
+      ContentType: text/html
+      Formatter: '%$SentryLoggingFormatter'
+  SentryLoggingFormatter:
+    class: Monolog\Formatter\LineFormatter
+    constructor:
+      - '%message%'
+  RavenClient:
+    class: Raven_Client
