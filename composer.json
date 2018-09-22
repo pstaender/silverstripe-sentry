@@ -8,7 +8,7 @@
     "sentry",
     "logging"
   ],
-  "license": "GPL-2.0-only",
+  "license": "MIT",
   "authors": [
     {
       "name": "Philipp Staender",
