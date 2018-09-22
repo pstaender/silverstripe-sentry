@@ -1,7 +1,4 @@
 SilverStripe\Core\Injector\Injector:
-  Psr\Log\LoggerInterface: 
-    calls:
-      LogFileHandler: [ pushHandler, [ '%$SentryLogHandler' ] ]
   SentryLogHandler:
     class: Monolog\Handler\RavenHandler
     constructor:
