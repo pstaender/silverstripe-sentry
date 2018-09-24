@@ -1,3 +1,6 @@
+---
+Name: sentry-logging
+---
 SilverStripe\Core\Injector\Injector:
   SentryLogHandler:
     class: Monolog\Handler\RavenHandler
