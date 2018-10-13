@@ -35,7 +35,7 @@ SilverStripe\Core\Injector\Injector:
       LogFileHandler: [ pushHandler, [ '%$SentryLogHandler' ] ]
   RavenClient:
     constructor:
-      - https://5f0956eceb53416a81c27baa39017bc7:27c496f935bb428dbfa6883368191993@sentry.studioworker.com/18
+      - https://…:…@…/18
 ---
 Name: mylogging
 After:
