@@ -48,7 +48,7 @@ SilverStripe\Core\Injector\Injector:
       Formatter: '%$Monolog\Formatter\JsonFormatter'
 ```
 
-## Do Everything by injection
+## Do everything by yourself via injection
 
 You can skip installing this module by installing the sentry-client:
 
