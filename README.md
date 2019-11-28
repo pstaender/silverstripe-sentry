@@ -10,7 +10,9 @@ Activate and setup Sentry logging in the config file of your project. Replace th
 
 ```yaml
 ---
-Name: myproject
+Name: sentry-logging
+Only:
+  environment: "live"
 ---
 SilverStripe\Core\Injector\Injector:
   Psr\Log\LoggerInterface: 
@@ -27,7 +29,9 @@ Just override the sentry-logging-config:
 
 ```yml
 ---
-Name: myproject
+Name: sentry-logging
+Only:
+  environment: "live"
 ---
 SilverStripe\Core\Injector\Injector:
   Psr\Log\LoggerInterface: 
