@@ -10,7 +10,7 @@ Activate and setup Sentry logging in the config file of your project. Replace th
 
 ```yaml
 ---
-Name: sentry-logging
+Name: my-sentry-logging
 Only:
   environment: "live"
 ---
@@ -41,7 +41,7 @@ SilverStripe\Core\Injector\Injector:
     constructor:
       - https://…:…@…/18
 ---
-Name: mylogging
+Name: my-sentry-logging
 After:
   - '#sentry-logging'
 ---
