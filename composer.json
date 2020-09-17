@@ -19,7 +19,7 @@
     "issues": "https://github.com/pstaender/silverstripe-sentry/issues"
   },
   "require": {
-    "sentry/sentry": "*",
+    "sentry/sentry": "^2",
     "monolog/monolog": "*"
   }
 }

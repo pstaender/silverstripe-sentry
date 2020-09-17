@@ -15,13 +15,15 @@ Only:
   environment: "live"
 ---
 SilverStripe\Core\Injector\Injector:
-  Psr\Log\LoggerInterface: 
+  Psr\Log\LoggerInterface:
     calls:
       LogFileHandler: [ pushHandler, [ '%$SentryLogHandler' ] ]
   RavenClient:
     constructor:
-      - https://…:…@sentry.myserver.com/1
+      - '`SENTRY_DSN_URL`'
 ```
+
+That's it - the exceptions will now be monitored by sentry.
 
 ## Use other formatter
 
@@ -34,7 +36,7 @@ Only:
   environment: "live"
 ---
 SilverStripe\Core\Injector\Injector:
-  Psr\Log\LoggerInterface: 
+  Psr\Log\LoggerInterface:
     calls:
       LogFileHandler: [ pushHandler, [ '%$SentryLogHandler' ] ]
   RavenClient:
@@ -52,26 +54,20 @@ SilverStripe\Core\Injector\Injector:
       Formatter: '%$Monolog\Formatter\JsonFormatter'
 ```
 
-## Do everything by yourself via injection
+## DIY Sentry Handling
 
-You can skip installing this module by installing the sentry-client:
-
-```
-  $ composer require sentry/sentry "*"
-```
-
-and modifying your project config:
+You can user sentry also without this module. Just install the official sentry-client (`composer require sentry/sentry`) and add toy your projects' config:
 
 ```yml
 ---
 Name: myproject
 ---
 SilverStripe\Core\Injector\Injector:
-  Psr\Log\LoggerInterface: 
+  Psr\Log\LoggerInterface:
     calls:
       LogFileHandler: [ pushHandler, [ '%$SentryLogHandler' ] ]
   SentryLogHandler:
-    class: Monolog\Handler\RavenHandler
+    class: Sentry\Monolog\Handler
     constructor:
       - '%$RavenClient'
     properties:

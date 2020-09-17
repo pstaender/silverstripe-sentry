@@ -3,7 +3,7 @@ Name: sentry-logging
 ---
 SilverStripe\Core\Injector\Injector:
   SentryLogHandler:
-    class: Monolog\Handler\RavenHandler
+    class: Sentry\Monolog\Handler
     constructor:
       - '%$RavenClient'
     properties:
