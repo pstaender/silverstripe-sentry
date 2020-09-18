@@ -19,6 +19,7 @@
     "issues": "https://github.com/pstaender/silverstripe-sentry/issues"
   },
   "require": {
-    "sentry/sentry": ">=2.0.0"
+    "sentry/sentry": ">=2.0.0",
+    "sentry/sdk": "2.0"
   }
 }
