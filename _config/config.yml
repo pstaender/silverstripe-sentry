@@ -14,4 +14,4 @@ SilverStripe\Core\Injector\Injector:
     constructor:
       - '%message%'
   RavenClient:
-    class: Raven_Client
+    class: \Sentry\ClientBuilder
